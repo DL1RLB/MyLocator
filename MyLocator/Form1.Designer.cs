@@ -50,7 +50,7 @@
             this.heimatlocator.Location = new System.Drawing.Point(78, 13);
             this.heimatlocator.Name = "heimatlocator";
             this.heimatlocator.Size = new System.Drawing.Size(100, 26);
-            this.heimatlocator.TabIndex = 0;
+            this.heimatlocator.TabIndex = 1;
             this.heimatlocator.Text = "JO62GK";
             this.heimatlocator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.heimatlocator.TextChanged += new System.EventHandler(this.homeLoc_TextChanged);
@@ -58,39 +58,42 @@
             // ziellocator
             // 
             this.ziellocator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ziellocator.Location = new System.Drawing.Point(78, 45);
+            this.ziellocator.Location = new System.Drawing.Point(78, 58);
             this.ziellocator.Name = "ziellocator";
             this.ziellocator.Size = new System.Drawing.Size(100, 26);
-            this.ziellocator.TabIndex = 1;
+            this.ziellocator.TabIndex = 0;
             this.ziellocator.Text = "JO62QM";
             this.ziellocator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ziellocator.TextChanged += new System.EventHandler(this.destLoc_TextChanged);
             // 
             // Berechnen
             // 
-            this.Berechnen.Location = new System.Drawing.Point(87, 141);
+            this.Berechnen.Location = new System.Drawing.Point(88, 227);
             this.Berechnen.Name = "Berechnen";
             this.Berechnen.Size = new System.Drawing.Size(75, 23);
             this.Berechnen.TabIndex = 4;
             this.Berechnen.Text = "Berechnen";
             this.Berechnen.Click += new System.EventHandler(this.Berechnen_Click);
+            this.Berechnen.Enter += new System.EventHandler(this.Berechnen_Click);
             // 
             // tbRichtung
             // 
             this.tbRichtung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRichtung.Location = new System.Drawing.Point(78, 77);
+            this.tbRichtung.Location = new System.Drawing.Point(78, 116);
             this.tbRichtung.Name = "tbRichtung";
             this.tbRichtung.Size = new System.Drawing.Size(100, 26);
             this.tbRichtung.TabIndex = 3;
+            this.tbRichtung.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbRichtung.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // tbEntfernung
             // 
             this.tbEntfernung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEntfernung.Location = new System.Drawing.Point(78, 109);
+            this.tbEntfernung.Location = new System.Drawing.Point(77, 170);
             this.tbEntfernung.Name = "tbEntfernung";
             this.tbEntfernung.Size = new System.Drawing.Size(101, 26);
             this.tbEntfernung.TabIndex = 5;
+            this.tbEntfernung.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbEntfernung.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1meinlocator
@@ -106,7 +109,7 @@
             // label1andererlocator
             // 
             this.label1andererlocator.AutoSize = true;
-            this.label1andererlocator.Location = new System.Drawing.Point(48, 56);
+            this.label1andererlocator.Location = new System.Drawing.Point(48, 69);
             this.label1andererlocator.Name = "label1andererlocator";
             this.label1andererlocator.Size = new System.Drawing.Size(24, 13);
             this.label1andererlocator.TabIndex = 8;
@@ -116,7 +119,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 90);
+            this.label1.Location = new System.Drawing.Point(22, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 9;
@@ -125,7 +128,7 @@
             // label2entfernung
             // 
             this.label2entfernung.AutoSize = true;
-            this.label2entfernung.Location = new System.Drawing.Point(13, 122);
+            this.label2entfernung.Location = new System.Drawing.Point(12, 178);
             this.label2entfernung.Name = "label2entfernung";
             this.label2entfernung.Size = new System.Drawing.Size(59, 13);
             this.label2entfernung.TabIndex = 9;
@@ -135,7 +138,7 @@
             // lblZielKoordinaten
             // 
             this.lblZielKoordinaten.AutoSize = true;
-            this.lblZielKoordinaten.Location = new System.Drawing.Point(184, 56);
+            this.lblZielKoordinaten.Location = new System.Drawing.Point(75, 87);
             this.lblZielKoordinaten.Name = "lblZielKoordinaten";
             this.lblZielKoordinaten.Size = new System.Drawing.Size(64, 13);
             this.lblZielKoordinaten.TabIndex = 10;
@@ -145,7 +148,7 @@
             // lblEigeneKoordinaten
             // 
             this.lblEigeneKoordinaten.AutoSize = true;
-            this.lblEigeneKoordinaten.Location = new System.Drawing.Point(184, 21);
+            this.lblEigeneKoordinaten.Location = new System.Drawing.Point(75, 42);
             this.lblEigeneKoordinaten.Name = "lblEigeneKoordinaten";
             this.lblEigeneKoordinaten.Size = new System.Drawing.Size(64, 13);
             this.lblEigeneKoordinaten.TabIndex = 11;
@@ -154,7 +157,7 @@
             // 
             // picHeading
             // 
-            this.picHeading.Location = new System.Drawing.Point(297, 12);
+            this.picHeading.Location = new System.Drawing.Point(192, 12);
             this.picHeading.Name = "picHeading";
             this.picHeading.Size = new System.Drawing.Size(260, 260);
             this.picHeading.TabIndex = 12;
@@ -165,18 +168,21 @@
             // lblDegrees
             // 
             this.lblDegrees.AutoSize = true;
-            this.lblDegrees.Location = new System.Drawing.Point(507, 275);
+            this.lblDegrees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDegrees.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblDegrees.Location = new System.Drawing.Point(305, 115);
             this.lblDegrees.Name = "lblDegrees";
-            this.lblDegrees.Size = new System.Drawing.Size(50, 13);
+            this.lblDegrees.Size = new System.Drawing.Size(73, 20);
             this.lblDegrees.TabIndex = 13;
             this.lblDegrees.Text = "Richtung";
+            this.lblDegrees.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblDegrees.Click += new System.EventHandler(this.lblDegrees_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 288);
+            this.ClientSize = new System.Drawing.Size(464, 291);
             this.Controls.Add(this.lblDegrees);
             this.Controls.Add(this.picHeading);
             this.Controls.Add(this.lblEigeneKoordinaten);
@@ -190,6 +196,7 @@
             this.Controls.Add(this.Berechnen);
             this.Controls.Add(this.ziellocator);
             this.Controls.Add(this.heimatlocator);
+            this.MinimumSize = new System.Drawing.Size(480, 330);
             this.Name = "Form1";
             this.Text = "MyLocator";
             this.Load += new System.EventHandler(this.Berechnen_Click);

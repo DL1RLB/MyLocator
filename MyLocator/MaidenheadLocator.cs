@@ -112,7 +112,7 @@ namespace MyLocator
 		/// <returns>Locator string</returns>
 		public static string LatLngToLocator(double Lat, double Long, int Ext)
 		{
-			int v;
+			//int v;
 			string locator = "";
 
 			Lat += 90;

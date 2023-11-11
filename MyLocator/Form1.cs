@@ -14,19 +14,18 @@ namespace MyLocator
             InitializeComponent();
         }
 
-      //  int CurrentValue = 90;
+        int CurrentValue = 1;
 
         public void Berechnen_Click(object sender, EventArgs e)
         {
             
-
         // Entfernung berechnen aus zwei Textfeldern
         double entfernung = MaidenheadLocator.Distance(heimatlocator.Text, ziellocator.Text);
             
             // Richtung berechnen aus zwei Textfeldern
             double richtung = MaidenheadLocator.Azimuth(heimatlocator.Text, ziellocator.Text);
             
-            int CurrentValueRichtung = Convert.ToInt32(CurrentValue);
+          //  int CurrentValueRichtung = Convert.ToInt32(richtung);
 
             // Heimatlocator aus dem Textfeld
             string heimatLocator = heimatlocator.Text;
@@ -39,20 +38,19 @@ namespace MyLocator
             string myLoc = MaidenheadLocator.LatLngToLocator(52.41, 12.55);
 
             tbRichtung.Text = Math.Round(double.Parse(richtung.ToString()),2).ToString() +" °";
-            lblDegrees.Text = CurrentValueRichtung.ToString();
+           // lblDegrees.Text = CurrentValue.ToString();
 
             tbEntfernung.Text = Math.Round(double.Parse(entfernung.ToString()),2).ToString() + " km";
-           // tbKoordinaten.Text = heimatkoordinaten.ToString();
-           // tbHeimatlocator.Text = heimatLocator.ToString();
             
             lblZielKoordinaten.Text = zielkoordinaten.ToString();
-            
             lblEigeneKoordinaten.Text = heimatkoordinaten.ToString();
+            
+            CurrentValue = Convert.ToInt32(richtung); // umwandeln der Gradanzahl in eine Ganzahlige Zahl
+            lblDegrees.Text = CurrentValue.ToString()+ " °"; // in label eintragen
 
+            //picCompass.Refresh();
+            picHeading.Refresh();
         }
-
-       
-        int CurrentValue = 80;
 
 
         #region runder Kompass
@@ -71,7 +69,7 @@ namespace MyLocator
         }
         #endregion
 
-        #region Grad Wert
+        //#region Grad Wert
         //private void Richtungszahl(object sender, EventArgs e)
         //{
         //    CurrentValue = 75;
@@ -80,7 +78,7 @@ namespace MyLocator
         //    //picCompass.Refresh();
         //    picHeading.Refresh();
         //}
-        #endregion
+        //#endregion
 
         #region runder Kompass
         private void DrawHeading(Graphics gr, int value, Font font)
@@ -254,11 +252,12 @@ namespace MyLocator
         {
 
         }
-        #endregion
+        
 
         private void lblDegrees_Click(object sender, EventArgs e)
         {
 
         }
+        #endregion
     }
 }
