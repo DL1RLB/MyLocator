@@ -9,6 +9,7 @@ In dieses Programm muss eine Klasse importiert werden.
 // Diese Klasse basiert auf einem Perl-Modul von Dirk Koopman, G1TLH, vom 07.11.2002.
 // Quelle: http://www.koders.com/perl/fidDAB6FD208AC4F5C0306CA344485FD0899BD2F328.aspx
 
-![image](https://github.com/DL1RLB/MyLocator/assets/69315366/4072f0fa-b1bd-4749-ab53-d41bf4914622)
+
+![grafik](https://github.com/DL1RLB/MyLocator/assets/69315366/785d6ebf-f176-4fc3-aa6b-39e8c165943a)
 
 Das Programm ist derzeit noch rudimentär. 
