@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.heimatlocator = new System.Windows.Forms.TextBox();
-            this.ziellocator = new System.Windows.Forms.TextBox();
+            this.tbHeimatlocator = new System.Windows.Forms.TextBox();
+            this.tbZiellocator = new System.Windows.Forms.TextBox();
             this.Berechnen = new System.Windows.Forms.Button();
             this.tbRichtung = new System.Windows.Forms.TextBox();
             this.tbEntfernung = new System.Windows.Forms.TextBox();
@@ -46,27 +46,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.picHeading)).BeginInit();
             this.SuspendLayout();
             // 
-            // heimatlocator
+            // tbHeimatlocator
             // 
-            this.heimatlocator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.heimatlocator.Location = new System.Drawing.Point(78, 13);
-            this.heimatlocator.Name = "heimatlocator";
-            this.heimatlocator.Size = new System.Drawing.Size(100, 26);
-            this.heimatlocator.TabIndex = 1;
-            this.heimatlocator.Text = "JO62GJ";
-            this.heimatlocator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.heimatlocator.TextChanged += new System.EventHandler(this.homeLoc_TextChanged);
+            this.tbHeimatlocator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHeimatlocator.Location = new System.Drawing.Point(78, 13);
+            this.tbHeimatlocator.Name = "tbHeimatlocator";
+            this.tbHeimatlocator.Size = new System.Drawing.Size(100, 26);
+            this.tbHeimatlocator.TabIndex = 1;
+            this.tbHeimatlocator.Text = "JO62GJ";
+            this.tbHeimatlocator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbHeimatlocator.TextChanged += new System.EventHandler(this.homeLoc_TextChanged);
             // 
-            // ziellocator
+            // tbZiellocator
             // 
-            this.ziellocator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ziellocator.Location = new System.Drawing.Point(78, 58);
-            this.ziellocator.Name = "ziellocator";
-            this.ziellocator.Size = new System.Drawing.Size(100, 26);
-            this.ziellocator.TabIndex = 0;
-            this.ziellocator.Text = "JO62QM";
-            this.ziellocator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ziellocator.TextChanged += new System.EventHandler(this.destLoc_TextChanged);
+            this.tbZiellocator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbZiellocator.Location = new System.Drawing.Point(78, 58);
+            this.tbZiellocator.Name = "tbZiellocator";
+            this.tbZiellocator.Size = new System.Drawing.Size(100, 26);
+            this.tbZiellocator.TabIndex = 0;
+            this.tbZiellocator.Text = "JO62QM";
+            this.tbZiellocator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbZiellocator.TextChanged += new System.EventHandler(this.destLoc_TextChanged);
             // 
             // Berechnen
             // 
@@ -210,8 +210,8 @@
             this.Controls.Add(this.tbEntfernung);
             this.Controls.Add(this.tbRichtung);
             this.Controls.Add(this.Berechnen);
-            this.Controls.Add(this.ziellocator);
-            this.Controls.Add(this.heimatlocator);
+            this.Controls.Add(this.tbZiellocator);
+            this.Controls.Add(this.tbHeimatlocator);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(480, 330);
             this.MinimumSize = new System.Drawing.Size(480, 330);
@@ -226,8 +226,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox heimatlocator;
-        private System.Windows.Forms.TextBox ziellocator;
+        private System.Windows.Forms.TextBox tbHeimatlocator;
+        private System.Windows.Forms.TextBox tbZiellocator;
         private System.Windows.Forms.Button Berechnen;
         private System.Windows.Forms.TextBox tbRichtung;
         private System.Windows.Forms.TextBox tbEntfernung;

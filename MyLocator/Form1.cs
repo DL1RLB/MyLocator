@@ -3,7 +3,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.Drawing;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 
 namespace MyLocator
 {
@@ -19,19 +19,23 @@ namespace MyLocator
         public void Berechnen_Click(object sender, EventArgs e)
         {
 
-        #region Entfernung und Richtung berechnen aus zwei Textfeldern
+            #region Entfernung und Richtung berechnen aus zwei Textfeldern
+
+            
+
+
             // die beiden Locatoreingaben holen und in der Klasse MaidenheadLocator ausrechnen lassen
-            double entfernung = MaidenheadLocator.Distance(heimatlocator.Text, ziellocator.Text);
+            double entfernung = MaidenheadLocator.Distance(tbHeimatlocator.Text, tbZiellocator.Text);
 
             // Richtung berechnen aus den zwei Textfeldern
-            double richtung = MaidenheadLocator.Azimuth(heimatlocator.Text, ziellocator.Text);
+            double richtung = MaidenheadLocator.Azimuth(tbHeimatlocator.Text, tbZiellocator.Text);
 
             // Heimatlocator aus dem Textfeld
-            string heimatLocator = heimatlocator.Text;
+            string heimatLocator = tbHeimatlocator.Text;
 
             // Koordinaten vom Lacator aus dem Textfeld des Heimatlocators
-            LatLng heimatkoordinaten = MaidenheadLocator.LocatorToLatLng(heimatlocator.Text);
-            LatLng zielkoordinaten = MaidenheadLocator.LocatorToLatLng(ziellocator.Text);
+            LatLng heimatkoordinaten = MaidenheadLocator.LocatorToLatLng(tbHeimatlocator.Text);
+            LatLng zielkoordinaten = MaidenheadLocator.LocatorToLatLng(tbZiellocator.Text);
 
             // Breite/Länge in Locator konvertieren
             string myLoc = MaidenheadLocator.LatLngToLocator(52.41, 12.55);
@@ -195,15 +199,39 @@ namespace MyLocator
         }
         #endregion
 
-        #region Leer
+        #region Heimatlocator Prüfen auf Richtigkeit der eingegebenen Buchstaben
         private void homeLoc_TextChanged(object sender, EventArgs e)
         {
+            if (new Regex("^[A-R,a-r]{2}[0-9]{2}[A-X,a-x]{2}$").IsMatch(tbHeimatlocator.Text))
+            {
+                tbHeimatlocator.Enabled = true;
+                tbHeimatlocator.ForeColor = Color.Black;
+            }
+            else
+            {
+                MessageBox.Show("Dieser Locator gibt es nicht!");
+                tbHeimatlocator.ForeColor = Color.Red;
+            }
         }
+        #endregion
 
+        #region Ziellocator Prüfen auf Richtigkeit der eingegebenen Buchstaben
         private void destLoc_TextChanged(object sender, EventArgs e)
         {
+            if (new Regex("^[A-R,a-r]{2}[0-9]{2}[A-X,a-x]{2}$").IsMatch(tbZiellocator.Text))
+            {
+                tbZiellocator.Enabled = true;
+                tbZiellocator.ForeColor = Color.Black;
+            }
+            else
+            {
+                MessageBox.Show("Dieser Locator gibt es nicht!");
+                tbZiellocator.ForeColor = Color.Red;
+            }
         }
+        #endregion
 
+        #region Leer
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
         }
