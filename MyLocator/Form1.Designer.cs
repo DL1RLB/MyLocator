@@ -42,6 +42,7 @@
             this.lblEigeneKoordinaten = new System.Windows.Forms.Label();
             this.picHeading = new System.Windows.Forms.PictureBox();
             this.lblDegrees = new System.Windows.Forms.Label();
+            this.btnInfobox = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picHeading)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,12 +182,23 @@
             this.lblDegrees.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblDegrees.Click += new System.EventHandler(this.lblDegrees_Click);
             // 
+            // btnInfobox
+            // 
+            this.btnInfobox.Location = new System.Drawing.Point(13, 256);
+            this.btnInfobox.Name = "btnInfobox";
+            this.btnInfobox.Size = new System.Drawing.Size(42, 23);
+            this.btnInfobox.TabIndex = 14;
+            this.btnInfobox.Text = "Help";
+            this.btnInfobox.UseVisualStyleBackColor = true;
+            this.btnInfobox.Click += new System.EventHandler(this.BtnInfobox_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.Berechnen;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 291);
+            this.Controls.Add(this.btnInfobox);
             this.Controls.Add(this.lblDegrees);
             this.Controls.Add(this.picHeading);
             this.Controls.Add(this.lblEigeneKoordinaten);
@@ -204,7 +216,7 @@
             this.MaximumSize = new System.Drawing.Size(480, 330);
             this.MinimumSize = new System.Drawing.Size(480, 330);
             this.Name = "Form1";
-            this.Text = "Locatorberechnung Richtung und Entfernung";
+            this.Text = "Locatorberechnung Richtung und Entfernung DL1RLB";
             this.Load += new System.EventHandler(this.Berechnen_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHeading)).EndInit();
             this.ResumeLayout(false);
@@ -227,6 +239,7 @@
         private System.Windows.Forms.Label lblEigeneKoordinaten;
         private System.Windows.Forms.PictureBox picHeading;
         private System.Windows.Forms.Label lblDegrees;
+        private System.Windows.Forms.Button btnInfobox;
     }
 }
 

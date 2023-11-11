@@ -19,13 +19,12 @@ namespace MyLocator
         public void Berechnen_Click(object sender, EventArgs e)
         {
 
-        #region Entfernung berechnen aus zwei Textfeldern
+        #region Entfernung und Richtung berechnen aus zwei Textfeldern
+            // die beiden Locatoreingaben holen und in der Klasse MaidenheadLocator ausrechnen lassen
             double entfernung = MaidenheadLocator.Distance(heimatlocator.Text, ziellocator.Text);
-            
-            // Richtung berechnen aus zwei Textfeldern
+
+            // Richtung berechnen aus den zwei Textfeldern
             double richtung = MaidenheadLocator.Azimuth(heimatlocator.Text, ziellocator.Text);
-            
-          //  int CurrentValueRichtung = Convert.ToInt32(richtung);
 
             // Heimatlocator aus dem Textfeld
             string heimatLocator = heimatlocator.Text;
@@ -37,18 +36,25 @@ namespace MyLocator
             // Breite/Länge in Locator konvertieren
             string myLoc = MaidenheadLocator.LatLngToLocator(52.41, 12.55);
 
-            tbRichtung.Text = Math.Round(double.Parse(richtung.ToString()),2).ToString() +" °";
-           // lblDegrees.Text = CurrentValue.ToString();
-
-            tbEntfernung.Text = Math.Round(double.Parse(entfernung.ToString()),2).ToString() + " km";
+            //Richtungswert auf 2 Kommastellen runden
+            tbRichtung.Text = Math.Round(double.Parse(richtung.ToString()), 2).ToString() + " °";
             
-            lblZielKoordinaten.Text = zielkoordinaten.ToString();
-            lblEigeneKoordinaten.Text = heimatkoordinaten.ToString();
-            
-            CurrentValue = Convert.ToInt32(richtung); // umwandeln der Gradanzahl in eine Ganzahlige Zahl
-            lblDegrees.Text = CurrentValue.ToString()+ " °"; // in label eintragen
+            // EntfernungsWert auf 2 Kommastellen runden 
+            tbEntfernung.Text = Math.Round(double.Parse(entfernung.ToString()), 2).ToString() + " km";
 
-            //picCompass.Refresh();
+            // in Textfeld eintragen
+            lblZielKoordinaten.Text = zielkoordinaten.ToString(); 
+            
+            // in Textfeld eintragen
+            lblEigeneKoordinaten.Text = heimatkoordinaten.ToString(); 
+            
+            // umwandeln der Gradanzahl in eine Ganzahlige Zahl
+            CurrentValue = Convert.ToInt32(richtung); 
+            
+            // in Label eintragen
+            lblDegrees.Text = CurrentValue.ToString() + " °"; 
+
+            // neuzeichnen der Kompassnadel bei Änderung 
             picHeading.Refresh();
         }
         #endregion
@@ -181,6 +187,14 @@ namespace MyLocator
         }
         #endregion
 
+        #region Button Hilfe Infobox aufrufen
+        private void BtnInfobox_Click(object sender, EventArgs e)
+        {
+            Info MyAboutBox = new Info();
+            MyAboutBox.ShowDialog();
+        }
+        #endregion
+
         #region Leer
         private void homeLoc_TextChanged(object sender, EventArgs e)
         {
@@ -217,7 +231,7 @@ namespace MyLocator
         private void label2_Click(object sender, EventArgs e)
         {
         }
-        
+
 
         private void lblZielKoordinaten_Click(object sender, EventArgs e)
         {
@@ -228,7 +242,7 @@ namespace MyLocator
         {
 
         }
-        
+
 
         private void lblDegrees_Click(object sender, EventArgs e)
         {

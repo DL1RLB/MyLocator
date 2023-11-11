@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
 [assembly: AssemblyTitle("MyLocator")]
-[assembly: AssemblyDescription("Berechnet die Entfernung zwischen zwei Locatorfeldern")]
+[assembly: AssemblyDescription("Im Amateurfunk werden keine Koordinaten, sondern Locatorfelder genutzt. \n\nDas Locatorfeld um Berlin und Brandenburg hat die Buchstaben JO62.  Hinzu kommt noch die Kleinfelder mit den Buchstaben A bis X Berlin hat den Locator JO62QM. (Zeile Q, Spalte M). Rom hat den Locator JN61GV und ist von der Stadt Brandenburg an der Havel (JO62GJ) nur 1166 Kilometer entfernt und liegt in 180 Grad (das ist nach Süden). Der Amateurfunker dreht seine Antenne also in 180 Grad.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Lutz Bär Brandenburg")]
 [assembly: AssemblyProduct("MyLocator")]
