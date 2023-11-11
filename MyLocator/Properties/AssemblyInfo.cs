@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Lutz Bär Brandenburg")]
 [assembly: AssemblyProduct("MyLocator")]
-[assembly: AssemblyCopyright("Copyright © 11.11.2023")]
+[assembly: AssemblyCopyright("Copyright © DL1RLB 11.11.2023")]
 [assembly: AssemblyTrademark("Amateurfunktools")]
 [assembly: AssemblyCulture("")]
 

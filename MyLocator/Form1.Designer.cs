@@ -216,7 +216,7 @@
             this.MaximumSize = new System.Drawing.Size(480, 330);
             this.MinimumSize = new System.Drawing.Size(480, 330);
             this.Name = "Form1";
-            this.Text = "Locatorberechnung Richtung und Entfernung DL1RLB";
+            this.Text = "Locatorberechnung Richtung und Entfernung";
             this.Load += new System.EventHandler(this.Berechnen_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHeading)).EndInit();
             this.ResumeLayout(false);
