@@ -23,9 +23,9 @@ Zeichnen der Kompassrose Quelle: C# Helper (http://www.csharphelper.com/howtos/h
 ![image](https://github.com/DL1RLB/MyLocator/assets/69315366/502fac11-5762-4c4c-9a97-2b4bb3dbf950)
 
 > [!WARNING]
-> - [ ] Es kommt eine Exeption wenn man die Buchstaben Y und Z am Ende eingibt. Diese Zeichen gibt es im Locaotr nicht.
+> - [ ] Es kommt eine Exeption wenn man die Buchstaben Y und Z am Ende eingibt. Diese Zeichen gibt es im Locator nicht. Als Zwischenlösung wird der Text in den Locatorfeldern farblich gändert.
 
-> [!IMPORTANT]
-> - [ ] Ein Link zu einer Locatorkarte kommt noch. Ich muss noch eine Lizenzfreie Karte suchen.
+> [!NOTE]
+> - [ ] Ein Link zu einer Locatorkarte findest du hier: (https://de.wikipedia.org/wiki/QTH-Locator)https://de.wikipedia.org/wiki/QTH-Locator
 
 
