@@ -11,6 +11,5 @@ In dieses Programm muss eine Klasse importiert werden.
 
 Zeichnen der Kompasrose Quelle: C# Helper (http://www.csharphelper.com/howtos/howto_horizontal_compass.html)
 
-![grafik](https://github.com/DL1RLB/MyLocator/assets/69315366/785d6ebf-f176-4fc3-aa6b-39e8c165943a)
+![image](https://github.com/DL1RLB/MyLocator/assets/69315366/b9fe37b2-1d0f-4857-949b-44aa434da7b0)
 
-Das Programm ist derzeit noch rudimentär. 
