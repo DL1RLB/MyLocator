@@ -18,9 +18,9 @@ namespace MyLocator
 
         public void Berechnen_Click(object sender, EventArgs e)
         {
-            
-        // Entfernung berechnen aus zwei Textfeldern
-        double entfernung = MaidenheadLocator.Distance(heimatlocator.Text, ziellocator.Text);
+
+        #region Entfernung berechnen aus zwei Textfeldern
+            double entfernung = MaidenheadLocator.Distance(heimatlocator.Text, ziellocator.Text);
             
             // Richtung berechnen aus zwei Textfeldern
             double richtung = MaidenheadLocator.Azimuth(heimatlocator.Text, ziellocator.Text);
@@ -51,7 +51,7 @@ namespace MyLocator
             //picCompass.Refresh();
             picHeading.Refresh();
         }
-
+        #endregion
 
         #region runder Kompass
         private void picHeading_Paint(object sender, PaintEventArgs e)
@@ -69,18 +69,7 @@ namespace MyLocator
         }
         #endregion
 
-        //#region Grad Wert
-        //private void Richtungszahl(object sender, EventArgs e)
-        //{
-        //    CurrentValue = 75;
-        //    lblDegrees.Text = "hä";
-
-        //    //picCompass.Refresh();
-        //    picHeading.Refresh();
-        //}
-        //#endregion
-
-        #region runder Kompass
+        #region Zeichnen runder Kompass
         private void DrawHeading(Graphics gr, int value, Font font)
         {
             float cx = picHeading.ClientSize.Width / 2f;
@@ -173,7 +162,8 @@ namespace MyLocator
         {
             return degrees * Math.PI / 180;
         }
-        #region zeiger im runden Kompass
+
+        #region Zeiger im runden Kompass
         private void DrawRotatedText(Graphics gr, Font font, Brush brush,
             string text, PointF location, float degrees)
         {
@@ -189,20 +179,6 @@ namespace MyLocator
             }
             gr.Restore(state);
         }
-        #endregion
-
-        #region alte einträge
-        // Zwei Locatorangaben definieren
-        //    string homeLoc = "JO62GK";
-        //    string destLoc = "JO63GJ";
-        // Entfernung [km] und Richtung [°] berechnen
-        //    double distance = MaidenheadLocator.Distance(homeLoc, destLoc);
-        //    double azimuth = MaidenheadLocator.Azimuth(homeLoc, destLoc);
-
-        // Locator in Breite/Länge konvertieren
-        //     LatLng homeLL = MaidenheadLocator.LocatorToLatLng(homeLoc);
-        //string myLoc = MaidenheadLocator.LatLngToLocator(49.57, 11.08);
-
         #endregion
 
         #region Leer

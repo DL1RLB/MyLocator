@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.heimatlocator = new System.Windows.Forms.TextBox();
             this.ziellocator = new System.Windows.Forms.TextBox();
             this.Berechnen = new System.Windows.Forms.Button();
@@ -51,7 +52,7 @@
             this.heimatlocator.Name = "heimatlocator";
             this.heimatlocator.Size = new System.Drawing.Size(100, 26);
             this.heimatlocator.TabIndex = 1;
-            this.heimatlocator.Text = "JO62GK";
+            this.heimatlocator.Text = "JO62GJ";
             this.heimatlocator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.heimatlocator.TextChanged += new System.EventHandler(this.homeLoc_TextChanged);
             // 
@@ -78,7 +79,8 @@
             // 
             // tbRichtung
             // 
-            this.tbRichtung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRichtung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRichtung.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.tbRichtung.Location = new System.Drawing.Point(78, 116);
             this.tbRichtung.Name = "tbRichtung";
             this.tbRichtung.Size = new System.Drawing.Size(100, 26);
@@ -88,7 +90,8 @@
             // 
             // tbEntfernung
             // 
-            this.tbEntfernung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEntfernung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEntfernung.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.tbEntfernung.Location = new System.Drawing.Point(77, 170);
             this.tbEntfernung.Name = "tbEntfernung";
             this.tbEntfernung.Size = new System.Drawing.Size(101, 26);
@@ -180,6 +183,7 @@
             // 
             // Form1
             // 
+            this.AcceptButton = this.Berechnen;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 291);
@@ -196,9 +200,11 @@
             this.Controls.Add(this.Berechnen);
             this.Controls.Add(this.ziellocator);
             this.Controls.Add(this.heimatlocator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(480, 330);
             this.MinimumSize = new System.Drawing.Size(480, 330);
             this.Name = "Form1";
-            this.Text = "MyLocator";
+            this.Text = "Locatorberechnung Richtung und Entfernung";
             this.Load += new System.EventHandler(this.Berechnen_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHeading)).EndInit();
             this.ResumeLayout(false);
