@@ -18,11 +18,7 @@ namespace MyLocator
 
         public void Berechnen_Click(object sender, EventArgs e)
         {
-
             #region Entfernung und Richtung berechnen aus zwei Textfeldern
-
-            
-
 
             // die beiden Locatoreingaben holen und in der Klasse MaidenheadLocator ausrechnen lassen
             double entfernung = MaidenheadLocator.Distance(tbHeimatlocator.Text, tbZiellocator.Text);
@@ -35,6 +31,8 @@ namespace MyLocator
 
             // Koordinaten vom Lacator aus dem Textfeld des Heimatlocators
             LatLng heimatkoordinaten = MaidenheadLocator.LocatorToLatLng(tbHeimatlocator.Text);
+
+            // Koordinaten vom Lacator aus dem Textfeld des Ziellocators
             LatLng zielkoordinaten = MaidenheadLocator.LocatorToLatLng(tbZiellocator.Text);
 
             // Breite/Länge in Locator konvertieren
@@ -209,7 +207,7 @@ namespace MyLocator
             }
             else
             {
-                MessageBox.Show("Dieser Locator gibt es nicht!");
+                //MessageBox.Show("Dieser Locator gibt es nicht!");
                 tbHeimatlocator.ForeColor = Color.Red;
             }
         }
@@ -225,7 +223,7 @@ namespace MyLocator
             }
             else
             {
-                MessageBox.Show("Dieser Locator gibt es nicht!");
+               // MessageBox.Show("Dieser Locator gibt es nicht!");
                 tbZiellocator.ForeColor = Color.Red;
             }
         }
