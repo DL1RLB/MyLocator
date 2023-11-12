@@ -55,7 +55,7 @@
             this.tbHeimatlocator.TabIndex = 1;
             this.tbHeimatlocator.Text = "JO62GJ";
             this.tbHeimatlocator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbHeimatlocator.TextChanged += new System.EventHandler(this.homeLoc_TextChanged);
+            this.tbHeimatlocator.TextChanged += new System.EventHandler(this.tbHeimatlocator_TextChanged);
             // 
             // tbZiellocator
             // 
@@ -217,6 +217,7 @@
             this.MinimumSize = new System.Drawing.Size(480, 330);
             this.Name = "Form1";
             this.Text = "Locatorberechnung Richtung und Entfernung";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Berechnen_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHeading)).EndInit();
             this.ResumeLayout(false);

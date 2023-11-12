@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
+
 namespace MyLocator
 {
     public partial class Form1 : Form
@@ -15,9 +16,13 @@ namespace MyLocator
         }
 
         int CurrentValue = 1;
+        
 
         public void Berechnen_Click(object sender, EventArgs e)
         {
+            // während des Ladens den Wert aus der Variablen heimatLocator holen und in die Textbox eintragen.
+            tbHeimatlocator.Text = Properties.Settings.Default.heimatLocator;
+            
             #region Entfernung und Richtung berechnen aus zwei Textfeldern
 
             // die beiden Locatoreingaben holen und in der Klasse MaidenheadLocator ausrechnen lassen
@@ -27,7 +32,7 @@ namespace MyLocator
             double richtung = MaidenheadLocator.Azimuth(tbHeimatlocator.Text, tbZiellocator.Text);
 
             // Heimatlocator aus dem Textfeld
-            string heimatLocator = tbHeimatlocator.Text;
+            //string heimatLocator = tbHeimatlocator.Text;
 
             // Koordinaten vom Lacator aus dem Textfeld des Heimatlocators
             LatLng heimatkoordinaten = MaidenheadLocator.LocatorToLatLng(tbHeimatlocator.Text);
@@ -58,8 +63,19 @@ namespace MyLocator
 
             // neuzeichnen der Kompassnadel bei Änderung 
             picHeading.Refresh();
+
         }
         #endregion
+
+        #region während des schließens den Wert speichern
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // speichert den Wert aus der Textbox in die Variable heimatLocator beim schließen der Form
+            Properties.Settings.Default.heimatLocator = tbHeimatlocator.Text;
+            Properties.Settings.Default.Save();
+        }
+        #endregion
+
 
         #region runder Kompass
         private void picHeading_Paint(object sender, PaintEventArgs e)
@@ -213,6 +229,22 @@ namespace MyLocator
         }
         #endregion
 
+        #region Heimatlocator Prüfen auf Richtigkeit der eingegebenen Buchstaben
+        private void tbHeimatlocator_TextChanged(object sender, EventArgs e)
+        {
+            if (new Regex("^[A-R,a-r]{2}[0-9]{2}[A-X,a-x]{2}$").IsMatch(tbHeimatlocator.Text))
+            {
+                tbHeimatlocator.Enabled = true;
+                tbHeimatlocator.ForeColor = Color.Black;
+            }
+            else
+            {
+                //MessageBox.Show("Dieser Locator gibt es nicht!");
+                tbHeimatlocator.ForeColor = Color.Red;
+            }
+        }
+        #endregion
+
         #region Ziellocator Prüfen auf Richtigkeit der eingegebenen Buchstaben
         private void destLoc_TextChanged(object sender, EventArgs e)
         {
@@ -274,6 +306,7 @@ namespace MyLocator
         {
 
         }
+
         #endregion
     }
 }
