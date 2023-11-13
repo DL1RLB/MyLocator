@@ -112,7 +112,7 @@ namespace MyLocator
 		/// <returns>Locator string</returns>
 		public static string LatLngToLocator(double Lat, double Long, int Ext)
 		{
-			//int v;
+			int v;
 			string locator = "";
 
 			Lat += 90;
@@ -289,7 +289,7 @@ namespace MyLocator
 
 		public override string ToString()
 		{
-			return Long.ToString("#.###") + (Long >= 0 ? "N" : "S") + " " + Lat.ToString("#.###") + (Lat >= 0 ? "E" : "W");
+			return Long.ToString("#.###") + (Long >= 0 ? " N" : " S") + "  " + Lat.ToString("#.###") + (Lat >= 0 ? " E" : " W");
 		}
 
 		public int CompareTo(object to)

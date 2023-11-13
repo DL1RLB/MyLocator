@@ -76,7 +76,6 @@ namespace MyLocator
         }
         #endregion
 
-
         #region runder Kompass
         private void picHeading_Paint(object sender, PaintEventArgs e)
         {
@@ -180,12 +179,12 @@ namespace MyLocator
             gr.FillEllipse(Brushes.LightBlue, rect);
             gr.DrawEllipse(Pens.Black, rect);
         }
-        #endregion
-
+        
         private double DegreesToRadians(float degrees)
         {
             return degrees * Math.PI / 180;
         }
+        #endregion
 
         #region Zeiger im runden Kompass
         private void DrawRotatedText(Graphics gr, Font font, Brush brush,
@@ -206,7 +205,7 @@ namespace MyLocator
         #endregion
 
         #region Button Hilfe Infobox aufrufen
-        private void BtnInfobox_Click(object sender, EventArgs e)
+        private void btnInfobox_Click(object sender, EventArgs e)
         {
             Info MyAboutBox = new Info();
             MyAboutBox.ShowDialog();
@@ -216,16 +215,7 @@ namespace MyLocator
         #region Heimatlocator Prüfen auf Richtigkeit der eingegebenen Buchstaben
         private void homeLoc_TextChanged(object sender, EventArgs e)
         {
-            if (new Regex("^[A-R,a-r]{2}[0-9]{2}[A-X,a-x]{2}$").IsMatch(tbHeimatlocator.Text))
-            {
-                tbHeimatlocator.Enabled = true;
-                tbHeimatlocator.ForeColor = Color.Black;
-            }
-            else
-            {
-                //MessageBox.Show("Dieser Locator gibt es nicht!");
-                tbHeimatlocator.ForeColor = Color.Red;
-            }
+
         }
         #endregion
 
@@ -258,6 +248,47 @@ namespace MyLocator
                // MessageBox.Show("Dieser Locator gibt es nicht!");
                 tbZiellocator.ForeColor = Color.Red;
             }
+        }
+        #endregion
+
+        #region Berechnung Locator aus dem Koordinator
+        private void btnBerechnenKoordinaten_Click(object sender, EventArgs e)
+        {
+            //double Long = 12.41;
+            // konvertieren und aus der Textbox die Werte holen
+            double Long = double.Parse(tbKoordinatenLongitude.Text);
+            
+            //double Lat = 52.41;
+            // konvertieren und aus der Textbox die Werte holen
+            double Lat = double.Parse(tbKoordinatenLatitude.Text);
+
+            // Breite/Länge in Locator konvertieren
+            string myLoc = MaidenheadLocator.LatLngToLocator(Lat, Long);
+
+            // Locator in Textfeld eintragen
+            tbBerechneterLocator.Text = myLoc.ToString();
+
+        }
+        #endregion
+
+        #region öffnet Webseite mit Locator
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String hamgeocoding = "https://dxcluster.ha8tks.hu/hamgeocoding/";
+            try
+            {
+                System.Diagnostics.Process.Start(hamgeocoding);
+            }
+            catch (System.ComponentModel.Win32Exception noBrowser)
+            {
+                if (noBrowser.ErrorCode == -2147467259)
+                    MessageBox.Show(noBrowser.Message);
+            }
+            catch (System.Exception other)
+            {
+                MessageBox.Show(other.Message);
+            }
+
         }
         #endregion
 
@@ -306,7 +337,71 @@ namespace MyLocator
         {
 
         }
+  
+        
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1Koordinaten_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbHeimatlocator_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbZiellocator_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbRichtung_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void tbEntfernung_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Berechnen_Click_1(object sender, EventArgs e)
+        {
+        }
+
+
+        
+
+        private void lblEigeneKoordinaten2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblZielKoordinaten2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbBerechneterLocator_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbKoordinatenLongitude_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbKoordinatenLatitude_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         #endregion
+
+        
     }
 }
