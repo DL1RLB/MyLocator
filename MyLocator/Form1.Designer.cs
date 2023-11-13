@@ -46,6 +46,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.picHeading = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbBerechneterLocator = new System.Windows.Forms.TextBox();
@@ -53,12 +55,12 @@
             this.tbKoordinatenLatitude = new System.Windows.Forms.TextBox();
             this.btnBerechnenKoordinaten2 = new System.Windows.Forms.Button();
             this.tabPage1Hilfe = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tabPage1Koordinaten.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHeading)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.tabPage1Hilfe.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -258,6 +260,26 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 273);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 23);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "Auf Karte anzeigen";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(346, 284);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 15);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Bitte mit Kommaeintragen";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -321,6 +343,8 @@
             // 
             // tabPage1Hilfe
             // 
+            this.tabPage1Hilfe.AutoScroll = true;
+            this.tabPage1Hilfe.Controls.Add(this.linkLabel1);
             this.tabPage1Hilfe.Location = new System.Drawing.Point(4, 22);
             this.tabPage1Hilfe.Name = "tabPage1Hilfe";
             this.tabPage1Hilfe.Padding = new System.Windows.Forms.Padding(3);
@@ -329,25 +353,16 @@
             this.tabPage1Hilfe.Text = "Hilfe";
             this.tabPage1Hilfe.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // linkLabel1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(346, 284);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 15);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "Bitte mit Kommaeintragen";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(7, 273);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "Auf Karte anzeigen";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(81, 129);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(288, 13);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://lutz-baer.homepage.t-online.de/wordpress/?p=2560";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Form1
             // 
@@ -369,6 +384,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picHeading)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage1Hilfe.ResumeLayout(false);
+            this.tabPage1Hilfe.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -400,6 +417,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

@@ -271,6 +271,26 @@ namespace MyLocator
         }
         #endregion
 
+        #region Link auf die Webseite für Hilfe
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            String hamgeocoding = "https://lutz-baer.homepage.t-online.de/wordpress/?p=2560";
+            try
+            {
+                System.Diagnostics.Process.Start(hamgeocoding);
+            }
+            catch (System.ComponentModel.Win32Exception noBrowser)
+            {
+                if (noBrowser.ErrorCode == -2147467259)
+                    MessageBox.Show(noBrowser.Message);
+            }
+            catch (System.Exception other)
+            {
+                MessageBox.Show(other.Message);
+            }
+        }
+        #endregion
+
         #region öffnet Webseite mit Locator
         private void button1_Click(object sender, EventArgs e)
         {
@@ -399,9 +419,7 @@ namespace MyLocator
         {
 
         }
-
         #endregion
 
-        
     }
 }
