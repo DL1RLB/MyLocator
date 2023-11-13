@@ -20,10 +20,12 @@ In dieses Programm muss eine Klasse importiert werden.
 > [!NOTE]
 Zeichnen der Kompassrose Quelle: C# Helper (http://www.csharphelper.com/howtos/howto_horizontal_compass.html)
 
-![image](https://github.com/DL1RLB/MyLocator/assets/69315366/502fac11-5762-4c4c-9a97-2b4bb3dbf950)
+![image](https://github.com/DL1RLB/MyLocator/assets/69315366/08bf2a04-7a5f-4621-9db2-5709bcc0b845)
+![image](https://github.com/DL1RLB/MyLocator/assets/69315366/755fbd94-04f5-4fcb-81b7-d6bac2ac7c18)
+
 
 > [!WARNING]
-> - [ ] Es kommt eine Exeption wenn man die Buchstaben Y und Z am Ende eingibt. Diese Zeichen gibt es im Locator nicht. Als Zwischenlösung wird der Text in den Locatorfeldern farblich gändert.
+> - [ ] Es kommt eine Exeption wenn man die Buchstaben Y und Z am Ende eingibt. Diese Zeichen gibt es im Locator nicht. Als Zwischenlösung wird der Text in den Locatorfeldern farblich gändert. Bei den Koordinaten müssen auch Kommas verwendet werden (z.B. 12,55 52,41). Bei Punkte kommt es ebenfalls zur Exeption.
 
 > [!NOTE]
 > - [ ] Ein Link zu einer Locatorkarte findest du hier: (https://de.wikipedia.org/wiki/QTH-Locator)https://de.wikipedia.org/wiki/QTH-Locator
