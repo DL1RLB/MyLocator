@@ -377,7 +377,7 @@
             this.Name = "Form1";
             this.Text = "Locatorberechnung Richtung und Entfernung";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            this.Load += new System.EventHandler(this.Berechnen_Click);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1Koordinaten.ResumeLayout(false);
             this.tabPage1Koordinaten.PerformLayout();

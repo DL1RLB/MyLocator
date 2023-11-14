@@ -20,10 +20,7 @@ namespace MyLocator
 
         public void Berechnen_Click(object sender, EventArgs e)
         {
-            // während des Ladens den Wert aus der Variablen heimatLocator holen und in die Textbox eintragen.
-            tbHeimatlocator.Text = Properties.Settings.Default.heimatLocator;
-            // während des Ladens den Wert aus der Variablen heimatLocator holen und in die Textbox eintragen.
-            tbZiellocator.Text = Properties.Settings.Default.zielLocator;
+            
 
             #region Entfernung und Richtung berechnen aus zwei Textfeldern
 
@@ -68,6 +65,18 @@ namespace MyLocator
 
         }
         #endregion
+
+        #region laden der letzten gespeicherten Daten
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // während des Ladens den Wert aus der Variablen heimatLocator holen und in die Textbox eintragen.
+            tbHeimatlocator.Text = Properties.Settings.Default.heimatLocator;
+            // während des Ladens den Wert aus der Variablen heimatLocator holen und in die Textbox eintragen.
+            tbZiellocator.Text = Properties.Settings.Default.zielLocator;
+            Berechnen_Click(this, EventArgs.Empty);
+        }
+        #endregion
+
 
         #region während des schließens den Wert speichern
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -422,5 +431,6 @@ namespace MyLocator
         }
         #endregion
 
+ 
     }
 }
