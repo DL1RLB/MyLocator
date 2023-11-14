@@ -5,5 +5,8 @@
     <Setting Name="heimatLocator" Type="System.String" Scope="User">
       <Value Profile="(Default)">JO62GJ</Value>
     </Setting>
+    <Setting Name="zielLocator" Type="System.String" Scope="User">
+      <Value Profile="(Default)">JO62QM</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

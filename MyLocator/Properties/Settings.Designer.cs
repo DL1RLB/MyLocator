@@ -34,5 +34,17 @@ namespace MyLocator.Properties {
                 this["heimatLocator"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("JO62QM")]
+        public string zielLocator {
+            get {
+                return ((string)(this["zielLocator"]));
+            }
+            set {
+                this["zielLocator"] = value;
+            }
+        }
     }
 }

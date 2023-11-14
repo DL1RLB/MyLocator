@@ -27,8 +27,8 @@
     <ProductName>MyLocator</ProductName>
     <PublisherName>Lutz Bär Brandenburg</PublisherName>
     <SuiteName>MyLocator</SuiteName>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.2</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -60,10 +60,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>6FFFD3561F9A31D3B703849B559FCA1B2FF67A14</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>9D21AD4149EA044FC27D13D6A41841D4F37297B9</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MyLocator_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MyLocator_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -123,6 +123,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="MyLocator_1_TemporaryKey.pfx" />
     <None Include="MyLocator_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

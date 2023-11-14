@@ -59,14 +59,5 @@ namespace MyLocator.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die string ähnelt.
-        /// </summary>
-        internal static string heimatLocator {
-            get {
-                return ResourceManager.GetString("heimatLocator", resourceCulture);
-            }
-        }
     }
 }
