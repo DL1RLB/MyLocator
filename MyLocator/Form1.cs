@@ -77,7 +77,6 @@ namespace MyLocator
         }
         #endregion
 
-
         #region während des schließens den Wert speichern
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -182,15 +181,16 @@ namespace MyLocator
                 new PointF(tip_x1, tip_y1),
                 new PointF(tip_x2, tip_y2),
             };
-            gr.FillPolygon(Brushes.Black, points);
+            gr.FillPolygon(Brushes.Black, points); // Zeiger
 
             // Draw the center.
-            const int center_r = 6;
+            const int center_r = 6; // Durchmesser Mittelpunktkreis
             RectangleF rect = new RectangleF(
                 cx - center_r, cy - center_r,
                 2 * center_r, 2 * center_r);
-            gr.FillEllipse(Brushes.LightBlue, rect);
-            gr.DrawEllipse(Pens.Black, rect);
+            gr.FillEllipse(Brushes.LightBlue, rect); // Füllung Kreis Mittelpunkt
+            gr.DrawEllipse(Pens.Black, rect);// Kreis im Mittelpunkt
+            
         }
         
         private double DegreesToRadians(float degrees)
@@ -199,7 +199,7 @@ namespace MyLocator
         }
         #endregion
 
-        #region Zeiger im runden Kompass
+        #region Zeiger drehen im runden Kompass
         private void DrawRotatedText(Graphics gr, Font font, Brush brush,
             string text, PointF location, float degrees)
         {
