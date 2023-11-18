@@ -46,6 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.picHeading = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnBerechnen2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.tbBerechneterLocator = new System.Windows.Forms.TextBox();
             this.tbKoordinatenLongitude = new System.Windows.Forms.TextBox();
             this.tbKoordinatenLatitude = new System.Windows.Forms.TextBox();
-            this.btnBerechnenKoordinaten2 = new System.Windows.Forms.Button();
             this.tabPage1Hilfe = new System.Windows.Forms.TabPage();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
@@ -73,7 +73,8 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(475, 328);
             this.tabControl1.TabIndex = 15;
-            this.tabControl1.Enter += new System.EventHandler(this.btnBerechnenKoordinaten_Click);
+            this.tabControl1.Click += new System.EventHandler(this.btnBerechnen2_Click);
+            this.tabControl1.Enter += new System.EventHandler(this.btnBerechnen2_Click);
             // 
             // tabPage1Koordinaten
             // 
@@ -243,6 +244,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnBerechnen2);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label2);
@@ -250,7 +252,6 @@
             this.tabPage2.Controls.Add(this.tbBerechneterLocator);
             this.tabPage2.Controls.Add(this.tbKoordinatenLongitude);
             this.tabPage2.Controls.Add(this.tbKoordinatenLatitude);
-            this.tabPage2.Controls.Add(this.btnBerechnenKoordinaten2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -258,7 +259,19 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Koordinaten";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            this.tabPage2.Click += new System.EventHandler(this.btnBerechnen2_Click);
+            this.tabPage2.Enter += new System.EventHandler(this.btnBerechnen2_Click);
+            // 
+            // btnBerechnen2
+            // 
+            this.btnBerechnen2.Location = new System.Drawing.Point(183, 187);
+            this.btnBerechnen2.Name = "btnBerechnen2";
+            this.btnBerechnen2.Size = new System.Drawing.Size(75, 23);
+            this.btnBerechnen2.TabIndex = 47;
+            this.btnBerechnen2.Text = "Berechnen";
+            this.btnBerechnen2.UseVisualStyleBackColor = true;
+            this.btnBerechnen2.Click += new System.EventHandler(this.btnBerechnen2_Click);
+            this.btnBerechnen2.Enter += new System.EventHandler(this.btnBerechnen2_Click);
             // 
             // button1
             // 
@@ -276,9 +289,9 @@
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(346, 284);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 15);
+            this.label3.Size = new System.Drawing.Size(118, 15);
             this.label3.TabIndex = 45;
-            this.label3.Text = "Bitte mit Kommaeintragen";
+            this.label3.Text = "Bitte mit Komma eintragen";
             // 
             // label2
             // 
@@ -329,17 +342,6 @@
             this.tbKoordinatenLatitude.Text = "52,41";
             this.tbKoordinatenLatitude.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbKoordinatenLatitude.TextChanged += new System.EventHandler(this.tbKoordinatenLatitude_TextChanged);
-            // 
-            // btnBerechnenKoordinaten2
-            // 
-            this.btnBerechnenKoordinaten2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBerechnenKoordinaten2.Location = new System.Drawing.Point(163, 181);
-            this.btnBerechnenKoordinaten2.Name = "btnBerechnenKoordinaten2";
-            this.btnBerechnenKoordinaten2.Size = new System.Drawing.Size(124, 36);
-            this.btnBerechnenKoordinaten2.TabIndex = 11;
-            this.btnBerechnenKoordinaten2.Text = "Berechnung";
-            this.btnBerechnenKoordinaten2.UseVisualStyleBackColor = true;
-            this.btnBerechnenKoordinaten2.Click += new System.EventHandler(this.btnBerechnenKoordinaten_Click);
             // 
             // tabPage1Hilfe
             // 
@@ -398,7 +400,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button btnBerechnenKoordinaten2;
+     //   private System.Windows.Forms.Button btnBerechnenAusKoordinaten;
         private System.Windows.Forms.Button btnInfobox;
         private System.Windows.Forms.Label lblEigeneKoordinaten;
         private System.Windows.Forms.Label lblZielKoordinaten;
@@ -418,6 +420,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button btnBerechnen2;
     }
 }
 

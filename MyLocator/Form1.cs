@@ -20,8 +20,6 @@ namespace MyLocator
 
         public void Berechnen_Click(object sender, EventArgs e)
         {
-            
-
             #region Entfernung und Richtung berechnen aus zwei Textfeldern
 
             // die beiden Locatoreingaben holen und in der Klasse MaidenheadLocator ausrechnen lassen
@@ -40,7 +38,7 @@ namespace MyLocator
             LatLng zielkoordinaten = MaidenheadLocator.LocatorToLatLng(tbZiellocator.Text);
 
             // Breite/Länge in Locator konvertieren
-            string myLoc = MaidenheadLocator.LatLngToLocator(52.41, 12.55);
+            //string myLoc = MaidenheadLocator.LatLngToLocator(52.41, 12.55);
 
             //Richtungswert auf 2 Kommastellen runden
             tbRichtung.Text = Math.Round(double.Parse(richtung.ToString()), 2).ToString() + " °";
@@ -66,6 +64,26 @@ namespace MyLocator
         }
         #endregion
 
+        #region Berechnung Locator aus dem Koordinator
+        private void btnBerechnen2_Click(object sender, EventArgs e)
+        {
+            //double Long = 12.41;
+            // konvertieren und aus der Textbox die Werte holen
+            double Long = double.Parse(tbKoordinatenLongitude.Text);
+
+            //double Lat = 52.41;
+            // konvertieren und aus der Textbox die Werte holen
+            double Lat = double.Parse(tbKoordinatenLatitude.Text);
+
+            // Breite/Länge in Locator konvertieren
+            string myLoc = MaidenheadLocator.LatLngToLocator(Lat, Long);
+
+            // Locator in Textfeld eintragen
+            tbBerechneterLocator.Text = myLoc.ToString();
+
+        }
+        #endregion
+
         #region laden der letzten gespeicherten Daten
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -73,6 +91,10 @@ namespace MyLocator
             tbHeimatlocator.Text = Properties.Settings.Default.heimatLocator;
             // während des Ladens den Wert aus der Variablen heimatLocator holen und in die Textbox eintragen.
             tbZiellocator.Text = Properties.Settings.Default.zielLocator;
+            // während des Ladens den Wert aus der Variablen KoordinatenLatitude holen und in die Textbox eintragen.
+            tbKoordinatenLatitude.Text = Properties.Settings.Default.KoordinatenLatitude;
+            // während des Ladens den Wert aus der Variablen heimatLocator holen und in die Textbox eintragen.
+            tbKoordinatenLongitude.Text = Properties.Settings.Default.KoordinatenLongitude;
             Berechnen_Click(this, EventArgs.Empty);
         }
         #endregion
@@ -84,6 +106,10 @@ namespace MyLocator
             Properties.Settings.Default.heimatLocator = tbHeimatlocator.Text;
             // speichert den Wert aus der Textbox in die Variable zielLocator beim schließen der Form
             Properties.Settings.Default.zielLocator = tbZiellocator.Text;
+            // speichert den Wert aus der Textbox in die Variable tbKoordinatenLatitude
+            Properties.Settings.Default.KoordinatenLatitude = tbKoordinatenLatitude.Text;
+            // speichert den Wert aus der Textbox in die Variable tbKoordinatenLongitude
+            Properties.Settings.Default.KoordinatenLongitude = tbKoordinatenLongitude.Text;
             Properties.Settings.Default.Save();
         }
         #endregion
@@ -226,13 +252,6 @@ namespace MyLocator
         #endregion
 
         #region Heimatlocator Prüfen auf Richtigkeit der eingegebenen Buchstaben
-        private void homeLoc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Heimatlocator Prüfen auf Richtigkeit der eingegebenen Buchstaben
         private void tbHeimatlocator_TextChanged(object sender, EventArgs e)
         {
             if (new Regex("^[A-R,a-r]{2}[0-9]{2}[A-X,a-x]{2}$").IsMatch(tbHeimatlocator.Text))
@@ -261,26 +280,6 @@ namespace MyLocator
                // MessageBox.Show("Dieser Locator gibt es nicht!");
                 tbZiellocator.ForeColor = Color.Red;
             }
-        }
-        #endregion
-
-        #region Berechnung Locator aus dem Koordinator
-        private void btnBerechnenKoordinaten_Click(object sender, EventArgs e)
-        {
-            //double Long = 12.41;
-            // konvertieren und aus der Textbox die Werte holen
-            double Long = double.Parse(tbKoordinatenLongitude.Text);
-            
-            //double Lat = 52.41;
-            // konvertieren und aus der Textbox die Werte holen
-            double Lat = double.Parse(tbKoordinatenLatitude.Text);
-
-            // Breite/Länge in Locator konvertieren
-            string myLoc = MaidenheadLocator.LatLngToLocator(Lat, Long);
-
-            // Locator in Textfeld eintragen
-            tbBerechneterLocator.Text = myLoc.ToString();
-
         }
         #endregion
 
@@ -401,10 +400,6 @@ namespace MyLocator
         {
         }
 
-        private void Berechnen_Click_1(object sender, EventArgs e)
-        {
-        }
-
         private void lblEigeneKoordinaten2_Click(object sender, EventArgs e)
         {
 
@@ -429,8 +424,9 @@ namespace MyLocator
         {
 
         }
+
         #endregion
 
- 
+
     }
 }

@@ -8,5 +8,11 @@
     <Setting Name="zielLocator" Type="System.String" Scope="User">
       <Value Profile="(Default)">JO62QM</Value>
     </Setting>
+    <Setting Name="KoordinatenLatitude" Type="System.String" Scope="User">
+      <Value Profile="(Default)">52,41</Value>
+    </Setting>
+    <Setting Name="KoordinatenLongitude" Type="System.String" Scope="User">
+      <Value Profile="(Default)">12,55</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
